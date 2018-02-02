@@ -1,0 +1,189 @@
+/*初始化标签*/
+body,div,ul,li,p,h1,h2,h3,h4{
+	margin: 0;
+	padding: 0;
+}
+ul li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+
+.comom-title{
+	margin: 100px auto;
+}
+
+/***************返回顶部***************/
+.gotop{
+    position: fixed;
+    bottom: 200px;
+    right: 0;
+    z-index: 99999;
+    border-radius: 10%;
+    display: none;
+     text-align: center;
+     opacity: 0.8;
+}
+.gotop:hover{
+	cursor: pointer;
+}
+.Imgcircle{
+	border-radius: 50%;
+}
+/***************navbar***************/
+.bg-dark {
+	opacity: 0.8;
+}
+.nav-item a{
+	color: #FFFFFF;
+	display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 90px;
+    text-align: center;
+}
+.nav-item a:hover{
+    text-decoration: none;
+    color: #767C7E;
+
+}
+/***************首页***************/
+.homePage{
+	background-color: #000;
+    background-image: url(../img/zxh.png);
+    background-repeat: no-repeat;
+    position: relative;
+    color: #FFFFFF;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+.homePage-content{
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 60vh;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.homePage-content .text-primary{
+	color: #4E7FEF!important;
+}
+.homePage-content h1{
+	margin:50px auto;
+}
+.homePage-content .countLink{
+	display: none;
+}
+.countDown p{
+    font-size: 24px;
+    font-weight: 600;
+    text-shadow: 0px 5px 25px #ccc;
+    margin-bottom: 10px;
+}
+.countDown .timer{
+	font-size: 40px;
+    font-weight: 700;
+    text-shadow: 2px 2px 18px #919191;
+}
+/***************解决方案***************/
+.SD-title{
+	margin:15px;
+}
+.SDchart{
+	display: flex;
+    justify-content: center;
+    /* align-content: center; */
+    align-items: center;
+
+}
+
+
+
+/***************团队介绍***************/
+.teamDescription-content .team-pic{
+	box-shadow: 0 0 0 5px rgb(255,255,255);
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+}
+.teamDescription-content .team-pic:hover{
+	animation: pic-loading 3s ease infinite alternate;
+}
+@keyframes pic-loading{
+	50%{
+		box-shadow: 0 0 40px 0px rgb(0,0,0);
+	}
+}
+.teamDescription-content .Tmember{
+	margin-top: 8px;
+}
+/***************脚部信息******************/
+.footerHolder{
+	height: 360px;
+	background-color: rgba(0,0,0,0.9);
+	color: #FFFFFF;
+	position: relative;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.footerHolder-link{
+    /*width: 340px;*/
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+
+}
+.footerHolder-link .link-circle{
+	display: inline-block;
+	background-image: url(../img/timg.jpg);
+	width: 26px;
+	height: 26px;
+	border-radius: 50%;
+	opacity: 0.8;
+	margin: 5px;
+}
+.footerHolder-link .link-circle:hover{
+	opacity: 1;
+}
+
+/***************响应式布局***************/
+@media (max-width:768px){
+
+	.gotop img{
+		width: 40px;
+		height: 40px;
+	}
+	.homePage{
+    background-image: none;
+	}
+	.teamDescription-content .team-pic{
+	width: 160px;
+    height: 160px;
+  }
+}
+
+@media (max-width:576px){
+	body{
+		font-size: 14px;
+	}
+	.homePage-content h1{
+		font-size: 12px;
+		font-weight: 500;
+	}
+	.countDown p,.countDown .timer{
+		font-size: 14px;
+	}
+ 	.comom-title{
+    	font-size: 20px;
+   		 margin: 40px auto;
+    }
+.SD-title{
+	font-size: 16px;
+}
+}
